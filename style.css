@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: repeat(3, 200px); 
+    gap:8px;
+    margin: 8px;
+}
+div{
+    background-color: aqua;
+}
+div:nth-child(even){
+    background-color: brown;
+}
+div:nth-child(1){
+    grid-column-start:1;
+    grid-column-end:-1; 
+}
+div:nth-child(2){
+    grid-row-start:2; 
+    grid-row-end: -1; 
+}
+div:nth-child(5){
+    grid-column-start:2; 
+    grid-column-end: -1; 
+}
